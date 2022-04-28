@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import './home_page.dart';
 // entry point
 
 void main() {
@@ -15,10 +15,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // The main build method has to return either a
     // Material App, Cupertino App or Widgets App
-    return MaterialApp(
-      home: Material(
-          child: Center(
-              child: Container(child: Text('Welcome to 30 days of flutter!')))),
-    );
+    return MaterialApp(home: HomePage());
   }
 }
