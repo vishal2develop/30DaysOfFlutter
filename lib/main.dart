@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'pages/home_page.dart';
@@ -22,12 +23,9 @@ class MyApp extends StatelessWidget {
     // Material App, Cupertino App or Widgets App
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily,
-          primaryTextTheme: GoogleFonts.latoTextTheme()),
+      theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: MyTheme.darkTheme(context),
       initialRoute: '/home',
       routes: {
         '/': (context) => LoginPage(),
