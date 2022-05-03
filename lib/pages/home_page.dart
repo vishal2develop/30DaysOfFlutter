@@ -52,13 +52,16 @@ class _HomePageState extends State<HomePage> {
     // replicating array items by passing in a number and referece list item
     // final dummyList = List.generate(10, (index) => CatalogModel.items[0]);
     return Scaffold(
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.pushNamed(context, MyRoutes.cartRoute);
           },
-          child: Icon(CupertinoIcons.cart),
-          backgroundColor: MyTheme.darkBlushColor,
+          child: Icon(
+            CupertinoIcons.cart,
+            color: Colors.white,
+          ),
+          backgroundColor: context.theme.buttonColor,
         ),
         body: SafeArea(
             child: Container(

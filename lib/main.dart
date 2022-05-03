@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     // The main build method has to return either a
     // Material App, Cupertino App or Widgets App
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
       darkTheme: MyTheme.darkTheme(context),
