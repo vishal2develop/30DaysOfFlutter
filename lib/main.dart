@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
+import 'pages/cart_page.dart';
+
 import './utils/routes.dart';
 
 // entry point
@@ -30,7 +32,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage()
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.cartRoute: (context) => CartPage()
       },
     );
   }
