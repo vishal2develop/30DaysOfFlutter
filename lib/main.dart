@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/core/store.dart';
+import 'package:velocity_x/velocity_x.dart';
 import './widgets/themes.dart';
-import 'package:google_fonts/google_fonts.dart';
-
+ 
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
 import 'pages/cart_page.dart';
@@ -11,7 +12,7 @@ import './utils/routes.dart';
 // entry point
 
 void main() {
-  runApp(MyApp());
+  runApp(VxState( store: MyStore(), interceptors: [], child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

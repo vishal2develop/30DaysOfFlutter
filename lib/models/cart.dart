@@ -3,10 +3,10 @@ import 'catalog.dart';
 class CartModel {
   // Creating a Single ton class
 
-  static final cartModel = CartModel._internal();
+  // static final cartModel = CartModel._internal();
 
-  CartModel._internal();
-  factory CartModel() => cartModel;
+  // CartModel._internal();
+  // factory CartModel() => cartModel;
 
   // catalog field
   CatalogModel _catalog = CatalogModel();
