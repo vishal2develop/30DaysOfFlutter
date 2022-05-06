@@ -33,16 +33,17 @@ class CartModel {
   num get totalPrice =>
       items.fold(0, (total, current) => total + current.price);
 
+// below methods are not required now as we have introduced State Management
   // // Add item
 
   // void add(Item item) {
   //   _itemIds.add(item.id);
   // }
 
-  // Remove Item
-  void remove(Item item) {
-    _itemIds.remove(item.id);
-  }
+  // // Remove Item
+  // void remove(Item item) {
+  //   _itemIds.remove(item.id);
+  // }
 }
 
 class AddMutation extends VxMutation<MyStore> {
@@ -51,7 +52,17 @@ class AddMutation extends VxMutation<MyStore> {
   AddMutation(this.item);
   @override
   perform() {
-    // TODO: implement bus logic
+    // add item to cart
     store?.cart._itemIds.add(item.id);
+  }
+}
+
+class RemoveMutation extends VxMutation<MyStore> {
+  final Item item;
+  RemoveMutation(this.item);
+  @override
+  perform() {
+    // remove item from cart
+    store?.cart._itemIds.remove(item.id);
   }
 }
