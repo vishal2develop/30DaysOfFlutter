@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/core/store.dart';
 import 'package:velocity_x/velocity_x.dart';
 import './widgets/themes.dart';
- 
+
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
 import 'pages/cart_page.dart';
@@ -12,7 +12,7 @@ import './utils/routes.dart';
 // entry point
 
 void main() {
-  runApp(VxState( store: MyStore(), interceptors: [], child: MyApp()));
+  runApp(VxState(store: MyStore(), interceptors: [], child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
       darkTheme: MyTheme.darkTheme(context),
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         '/': (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
